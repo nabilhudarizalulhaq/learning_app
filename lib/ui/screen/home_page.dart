@@ -17,8 +17,8 @@ class _HomePageState extends State<HomePage> {
 
   List<Widget> body = [
     const HomePageIndex(),
-    const ProfilePage(),
-    const SettingPage(),
+     ProfilePage(),
+     const SettingPage(),
   ];
   @override
   Widget build(BuildContext context) {

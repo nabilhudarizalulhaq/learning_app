@@ -4,15 +4,9 @@ import 'package:learning_mobile/ui/screen/widgets/bottons.dart';
 import 'package:learning_mobile/ui/screen/widgets/icon_appbar.dart';
 import 'package:learning_mobile/ui/screen/widgets/profile_button.dart';
 
-class ProfilePage extends StatefulWidget {
+class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
-  @override
-  State<ProfilePage> createState() => _ProfilePageState();
-}
-
-class _ProfilePageState extends State<ProfilePage> {
-  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

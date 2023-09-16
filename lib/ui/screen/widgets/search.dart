@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_mobile/shared/theme.dart';
 
-class Search extends StatefulWidget {
+class Search extends StatelessWidget {
   final String title;
   final TextEditingController? controller;
   final bool isShowTitle;
@@ -16,33 +16,28 @@ class Search extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<Search> createState() => _SearchState();
-}
-
-class _SearchState extends State<Search> {
-  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (widget.isShowTitle)
+        if (isShowTitle)
           Text(
-            widget.title,
+            title,
             style: greyTextStyle.copyWith(
               fontSize: 14,
               fontWeight: medium,
             ),
           ),
-        if (widget.isShowTitle)
+        if (isShowTitle)
           const SizedBox(
             height: 8,
           ),
         TextFormField(
           obscureText: false,
-          controller: widget.controller,
-          keyboardType: widget.keyboardType,
+          controller: controller,
+          keyboardType: keyboardType,
           decoration: InputDecoration(
-            hintText: !widget.isShowTitle ? widget.title : null,
+            hintText: !isShowTitle ? title : null,
             suffixIcon: toggleSearch(),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
@@ -65,7 +60,6 @@ class _SearchState extends State<Search> {
     );
   }
 }
-
 
 // class Search extends StatelessWidget {
 //   final String title;
