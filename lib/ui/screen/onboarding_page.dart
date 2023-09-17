@@ -32,128 +32,137 @@ class _OnboardingPageState extends State<OnboardingPage> {
       backgroundColor: white,
       body: Center(
           child: Column(
+            verticalDirection: VerticalDirection.down,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CarouselSlider(
-            items: [
-              Image.asset(
-                'assets/onboarding1.png',
+          SizedBox(
+            width: 235,
+            child: CarouselSlider(
+              items: [
+                Image.asset(
+                  'assets/onboarding1.png',
+                ),
+                Image.asset(
+                  'assets/onboarding2.png',
+                ),
+                Image.asset(
+                  'assets/onboarding3.png',
+                ),
+              ],
+              options: CarouselOptions(
+                // height: 90,
+                aspectRatio: 16/9,
+                viewportFraction: 1,
+                enableInfiniteScroll: false,
+                onPageChanged: ((index, reason) {
+                  setState(() {
+                    currentIndex = index;
+                  });
+                }),
               ),
-              Image.asset(
-                'assets/onboarding2.png',
-              ),
-              Image.asset(
-                'assets/onboarding3.png',
-              ),
-            ],
-            options: CarouselOptions(
-              height: 375,
-              viewportFraction: 1,
-              enableInfiniteScroll: false,
-              onPageChanged: ((index, reason) {
-                setState(() {
-                  currentIndex = index;
-                });
-              }),
+              carouselController: carouselController,
             ),
-            carouselController: carouselController,
           ),
           const SizedBox(
             height: 16,
           ),
-          Container(
-            margin: const EdgeInsets.symmetric(
-              horizontal: 24,
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Column(
-              children: [
-                Text(
-                  titles[currentIndex],
-                  style: blackTextStyle.copyWith(
-                    fontSize: 23,
-                    fontWeight: bold,
+          Center(
+            child: Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: 24,
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    titles[currentIndex],
+                    style: blackTextStyle.copyWith(
+                      fontSize: 23,
+                      fontWeight: bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  subtitle[currentIndex],
-                  style: greyTextStyle.copyWith(
-                    fontSize: 12,
+                  const SizedBox(
+                    height: 8,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 16,
-                      height: 6,
-                      margin: const EdgeInsets.only(right: 8),
-                      decoration: BoxDecoration(
-                        shape: currentIndex == 0
-                            ? BoxShape.rectangle
-                            : BoxShape.circle,
-                        borderRadius:
-                            currentIndex == 0 ? BorderRadius.circular(4) : null,
-                        color: currentIndex == 0 ? secondaryColor : gray,
-                      ),
+                  Text(
+                    subtitle[currentIndex],
+                    style: greyTextStyle.copyWith(
+                      fontSize: 12,
                     ),
-                    Container(
-                      width: 16,
-                      height: 6,
-                      margin: const EdgeInsets.only(right: 8),
-                      decoration: BoxDecoration(
-                        shape: currentIndex == 1
-                            ? BoxShape.rectangle
-                            : BoxShape.circle,
-                        borderRadius:
-                            currentIndex == 1 ? BorderRadius.circular(4) : null,
-                        color: currentIndex == 1 ? secondaryColor : gray,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 16,
+                        height: 6,
+                        margin: const EdgeInsets.only(right: 8),
+                        decoration: BoxDecoration(
+                          shape: currentIndex == 0
+                              ? BoxShape.rectangle
+                              : BoxShape.circle,
+                          borderRadius:
+                              currentIndex == 0 ? BorderRadius.circular(4) : null,
+                          color: currentIndex == 0 ? secondaryColor : gray,
+                        ),
                       ),
-                    ),
-                    Container(
-                      width: 16,
-                      height: 6,
-                      margin: const EdgeInsets.only(right: 8),
-                      decoration: BoxDecoration(
-                        shape: currentIndex == 2
-                            ? BoxShape.rectangle
-                            : BoxShape.circle,
-                        borderRadius:
-                            currentIndex == 2 ? BorderRadius.circular(4) : null,
-                        color: currentIndex == 2 ? secondaryColor : gray,
+                      Container(
+                        width: 16,
+                        height: 6,
+                        margin: const EdgeInsets.only(right: 8),
+                        decoration: BoxDecoration(
+                          shape: currentIndex == 1
+                              ? BoxShape.rectangle
+                              : BoxShape.circle,
+                          borderRadius:
+                              currentIndex == 1 ? BorderRadius.circular(4) : null,
+                          color: currentIndex == 1 ? secondaryColor : gray,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 72,
-                ),
-                currentIndex == 2
-                    ? CustomFilledButton(
-                        title: 'Let`s Start',
-                        onPressed: () {
-                          Navigator.pushNamed(
-                              context, '/login');
-                        },
-                      )
-                    : CustomFilledButton(
-                        title: 'Continue',
-                        onPressed: () {
-                          carouselController.nextPage();
-                        },
+                      Container(
+                        width: 16,
+                        height: 6,
+                        margin: const EdgeInsets.only(right: 8),
+                        decoration: BoxDecoration(
+                          shape: currentIndex == 2
+                              ? BoxShape.rectangle
+                              : BoxShape.circle,
+                          borderRadius:
+                              currentIndex == 2 ? BorderRadius.circular(4) : null,
+                          color: currentIndex == 2 ? secondaryColor : gray,
+                        ),
                       ),
-                const SizedBox(
-                  height: 15,
-                ),
-              ],
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  currentIndex == 2
+                        ? CustomFilledButton(
+                            title: 'Let`s Start',
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, '/login');
+                            },
+                          )
+                      :  CustomFilledButton(
+                            title: 'Continue',
+                            onPressed: () {
+                              carouselController.nextPage();
+                            },
+                          ),
+          
+                  const SizedBox(
+                    height: 15,
+                  ),
+                ],
+              ),
             ),
           ),
         ],

@@ -27,8 +27,8 @@ class CardHomeWidgetPage extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(top: 12),
           padding: const EdgeInsets.only(top: 6),
-          width: 343,
-          height: 288,
+          width: 500,
+          height: 325,
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.vertical(
               top: Radius.circular(8),
@@ -51,7 +51,7 @@ class CardHomeWidgetPage extends StatelessWidget {
                 children: [
                   Container(
                     height: 43,
-                    width: 342,
+                    width: 500,
                     decoration: BoxDecoration(
                       color: uibackgroundColor,
                     ),
@@ -72,8 +72,8 @@ class CardHomeWidgetPage extends StatelessWidget {
                 children: [
                   Container(
                     padding: const EdgeInsets.all(16),
-                    width: 342,
-                    height: 103,
+                    width: 500,
+                    height: 129,
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.vertical(
                         bottom: Radius.circular(8),

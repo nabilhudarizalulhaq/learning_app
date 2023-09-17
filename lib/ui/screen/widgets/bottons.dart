@@ -11,7 +11,7 @@ class CustomFilledButton extends StatelessWidget {
     super.key,
     required this.title,
     this.width = double.infinity,
-    this.height = 50,
+    this.height = 45,
     this.onPressed,
   });
 
@@ -25,7 +25,7 @@ class CustomFilledButton extends StatelessWidget {
         style: TextButton.styleFrom(
           backgroundColor: primaryColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(14),
           ),
         ),
         child: Text(

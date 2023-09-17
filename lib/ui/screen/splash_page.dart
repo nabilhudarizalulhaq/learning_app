@@ -25,9 +25,9 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: white,
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.only(top: 150),
               width: 375,
               height: 264,
               decoration: const BoxDecoration(

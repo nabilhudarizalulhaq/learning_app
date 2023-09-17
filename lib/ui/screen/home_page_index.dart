@@ -130,6 +130,13 @@ Widget buildCourse() {
         subname: 'Advanced mobile interface design',
         imageUrl: 'assets/img_html.png',
       ),
+      CardHomeWidgetPage(
+        price: '50',
+        time: '3 h 30 min ',
+        name: 'HTML',
+        subname: 'Advanced mobile interface design',
+        imageUrl: 'assets/img_html.png',
+      ),
     ],
   );
 }
