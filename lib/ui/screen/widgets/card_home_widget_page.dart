@@ -59,7 +59,7 @@ class CardHomeWidgetPage extends StatelessWidget {
                       children: [
                         Spacer(),
                         CustomBlueButton(
-                          title: '50',
+                          title: '\$ 50',
                           width: 63,
                           height: 28,
                         ),

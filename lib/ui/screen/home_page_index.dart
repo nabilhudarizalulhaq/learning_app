@@ -26,7 +26,6 @@ class HomePageIndex extends StatelessWidget {
   }
 }
 
-
 Widget buildProfile(BuildContext context) {
   return Container(
     margin: const EdgeInsets.only(top: 8),
@@ -117,21 +116,21 @@ Widget buildCourse() {
   return const Column(
     children: [
       CardHomeWidgetPage(
-        price: '50',
+        price: '\$50',
         time: '3 h 30 min ',
         name: 'UI',
         subname: 'Advanced mobile interface design',
         imageUrl: 'assets/img_ui.png',
       ),
       CardHomeWidgetPage(
-        price: '50',
+        price: '\$50',
         time: '3 h 30 min ',
         name: 'HTML',
         subname: 'Advanced mobile interface design',
         imageUrl: 'assets/img_html.png',
       ),
       CardHomeWidgetPage(
-        price: '50',
+        price: '\$50',
         time: '3 h 30 min ',
         name: 'HTML',
         subname: 'Advanced mobile interface design',

@@ -40,7 +40,6 @@ class CustomFilledButton extends StatelessWidget {
   }
 }
 
-
 class CustomBlueButton extends StatelessWidget {
   final String title;
   final double width;
@@ -81,7 +80,6 @@ class CustomBlueButton extends StatelessWidget {
   }
 }
 
-
 class CustomTextButton extends StatelessWidget {
   final String title;
   final double width;
@@ -106,10 +104,7 @@ class CustomTextButton extends StatelessWidget {
         style: TextButton.styleFrom(padding: EdgeInsets.zero),
         child: Text(
           title,
-          style: greyTextStyle.copyWith(
-            fontSize: 16,
-            fontWeight: bold
-          ),
+          style: greyTextStyle.copyWith(fontSize: 16, fontWeight: bold),
         ),
       ),
     );
