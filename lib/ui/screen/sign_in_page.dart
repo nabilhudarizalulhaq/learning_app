@@ -12,7 +12,7 @@ class SignInPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 50),
           children: [
             Container(
               width: 340,

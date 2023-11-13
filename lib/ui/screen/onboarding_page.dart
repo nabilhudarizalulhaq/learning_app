@@ -32,7 +32,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       backgroundColor: white,
       body: Center(
           child: Column(
-            verticalDirection: VerticalDirection.down,
+        verticalDirection: VerticalDirection.down,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
@@ -50,8 +50,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 ),
               ],
               options: CarouselOptions(
-                // height: 90,
-                aspectRatio: 16/9,
+                height: 235,
+                aspectRatio: 16 / 9,
                 viewportFraction: 1,
                 enableInfiniteScroll: false,
                 onPageChanged: ((index, reason) {
@@ -107,8 +107,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           shape: currentIndex == 0
                               ? BoxShape.rectangle
                               : BoxShape.circle,
-                          borderRadius:
-                              currentIndex == 0 ? BorderRadius.circular(4) : null,
+                          borderRadius: currentIndex == 0
+                              ? BorderRadius.circular(4)
+                              : null,
                           color: currentIndex == 0 ? secondaryColor : gray,
                         ),
                       ),
@@ -120,8 +121,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           shape: currentIndex == 1
                               ? BoxShape.rectangle
                               : BoxShape.circle,
-                          borderRadius:
-                              currentIndex == 1 ? BorderRadius.circular(4) : null,
+                          borderRadius: currentIndex == 1
+                              ? BorderRadius.circular(4)
+                              : null,
                           color: currentIndex == 1 ? secondaryColor : gray,
                         ),
                       ),
@@ -133,8 +135,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           shape: currentIndex == 2
                               ? BoxShape.rectangle
                               : BoxShape.circle,
-                          borderRadius:
-                              currentIndex == 2 ? BorderRadius.circular(4) : null,
+                          borderRadius: currentIndex == 2
+                              ? BorderRadius.circular(4)
+                              : null,
                           color: currentIndex == 2 ? secondaryColor : gray,
                         ),
                       ),
@@ -144,20 +147,18 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     height: 20,
                   ),
                   currentIndex == 2
-                        ? CustomFilledButton(
-                            title: 'Let`s Start',
-                            onPressed: () {
-                              Navigator.pushNamed(
-                                  context, '/login');
-                            },
-                          )
-                      :  CustomFilledButton(
-                            title: 'Continue',
-                            onPressed: () {
-                              carouselController.nextPage();
-                            },
-                          ),
-          
+                      ? CustomFilledButton(
+                          title: 'Let`s Start',
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/login');
+                          },
+                        )
+                      : CustomFilledButton(
+                          title: 'Continue',
+                          onPressed: () {
+                            carouselController.nextPage();
+                          },
+                        ),
                   const SizedBox(
                     height: 15,
                   ),

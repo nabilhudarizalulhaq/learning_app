@@ -12,9 +12,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Colors.transparent,
-        leading: const IconAppbar()
-      ),
+          backgroundColor: Colors.transparent, leading: const IconAppbar()),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         children: [
@@ -96,5 +94,3 @@ class SignUpPage extends StatelessWidget {
     );
   }
 }
-
-

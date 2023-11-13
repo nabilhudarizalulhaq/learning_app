@@ -17,14 +17,14 @@ class _HomePageState extends State<HomePage> {
 
   List<Widget> body = [
     const HomePageIndex(),
-     ProfilePage(),
-     const SettingPage(),
+    ProfilePage(),
+    const SettingPage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        height: 93,
+        height: 113,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
             topRight: Radius.circular(16),
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {},
                   icon: Image.asset(
                     'assets/ic_book.png',
-                    width: 30,
+                    width: 50,
                     color: currentIndex == 0 ? primaryColor : gray,
                   ),
                 ),
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   icon: Image.asset(
                     'assets/profile_home.png',
-                    width: 30,
+                    width: 50,
                     color: currentIndex == 1 ? primaryColor : gray,
                   ),
                 ),
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   icon: Image.asset(
                     'assets/ic_setting.png',
-                    width: 30,
+                    width: 50,
                     color: currentIndex == 2 ? primaryColor : gray,
                   ),
                 ),
