@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   icon: Image.asset(
                     'assets/ic_setting.png',
-                    width: 50,
+                    width: 60,
                     color: currentIndex == 2 ? primaryColor : gray,
                   ),
                 ),

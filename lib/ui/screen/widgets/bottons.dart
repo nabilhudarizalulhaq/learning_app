@@ -11,7 +11,7 @@ class CustomFilledButton extends StatelessWidget {
     super.key,
     required this.title,
     this.width = double.infinity,
-    this.height = 45,
+    this.height = 50,
     this.onPressed,
   });
 
@@ -31,7 +31,7 @@ class CustomFilledButton extends StatelessWidget {
         child: Text(
           title,
           style: whiteTextStyle.copyWith(
-            fontSize: 16,
+            fontSize: 18,
             fontWeight: semiBold,
           ),
         ),

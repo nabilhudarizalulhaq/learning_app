@@ -36,7 +36,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width: 235,
+            // width: 235,
             child: CarouselSlider(
               items: [
                 Image.asset(
@@ -71,25 +71,25 @@ class _OnboardingPageState extends State<OnboardingPage> {
               margin: const EdgeInsets.symmetric(
                 horizontal: 24,
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+              // padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     titles[currentIndex],
                     style: blackTextStyle.copyWith(
-                      fontSize: 23,
+                      fontSize: 26,
                       fontWeight: bold,
                     ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(
-                    height: 8,
+                    height: 12,
                   ),
                   Text(
                     subtitle[currentIndex],
                     style: greyTextStyle.copyWith(
-                      fontSize: 12,
+                      fontSize: 14,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -100,8 +100,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        width: 16,
-                        height: 6,
+                        width: 18,
+                        height: 9,
                         margin: const EdgeInsets.only(right: 8),
                         decoration: BoxDecoration(
                           shape: currentIndex == 0
@@ -114,8 +114,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         ),
                       ),
                       Container(
-                        width: 16,
-                        height: 6,
+                        width: 18,
+                        height: 9,
                         margin: const EdgeInsets.only(right: 8),
                         decoration: BoxDecoration(
                           shape: currentIndex == 1
@@ -128,8 +128,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         ),
                       ),
                       Container(
-                        width: 16,
-                        height: 6,
+                        width: 18,
+                        height: 9,
                         margin: const EdgeInsets.only(right: 8),
                         decoration: BoxDecoration(
                           shape: currentIndex == 2
@@ -144,7 +144,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ],
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 24,
                   ),
                   currentIndex == 2
                       ? CustomFilledButton(
